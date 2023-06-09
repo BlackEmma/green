@@ -4,14 +4,12 @@ import style from './LoginForm.module.css';
 function LoginForm(): JSX.Element {
   return (
     <div className={style.container}>
-      <div className={style.content}>
-        <form>
-          <label htmlFor="idInstance">Your idInstance:</label>
-          <input id="idInstance" />
-          <label htmlFor="apiTokenInstance">Your apiTokenInstance:</label>
-          <input id="apiTokenInstance" />
-        </form>
-      </div>
+      <h2 className={style.title}>Sign In</h2>
+      <form className={style.content}>
+        <input className={style.input} type="text" placeholder="Enter your idInstance" />
+        <input className={style.input} type="text" placeholder="Enter your apiTokenInstance" />
+        <button type="button" className={style.button}>Login</button>
+      </form>
     </div>
   );
 }
